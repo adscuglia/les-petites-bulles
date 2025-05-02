@@ -1,5 +1,7 @@
 # Fichiers sensibles
 controller/config.php
+controller/contact.php
+controller/reservation.php
 
 # les fichiers de la bdd 
 assets/

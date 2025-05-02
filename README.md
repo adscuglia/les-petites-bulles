@@ -21,4 +21,4 @@ Un site vitrine dédié aux ateliers de couture pour enfants, avec une réservat
 - JavaScript
 - Hébergement : o2switch
 
-![Page d'accueil](public/Image/capture/aPropos.png)
+![header](public/Image/capture/aPropos.png)
