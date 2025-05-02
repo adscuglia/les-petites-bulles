@@ -1,0 +1,97 @@
+footer {
+	display: flex;
+	flex-direction: column;
+	background-color: #ffffff;
+	padding-top: 20px;
+	width: 100%;
+}
+
+footer > div:nth-child(2) p {
+	max-width: 550px;
+}
+
+footer > a:first-child img {
+	display: none;
+}
+
+footer img {
+	width: 1.3em;
+}
+
+footer {
+	color: #51816a;
+}
+
+footer a {
+	text-decoration: none;
+	color: #51816a;
+}
+
+footer a:hover {
+	color: black;
+}
+
+footer > div:nth-last-child(2) {
+	font-size: 1.1rem;
+}
+
+footer > div:last-child {
+	text-align: center;
+	font-size: 0.9rem;
+}
+
+footer #reseaux img{
+	width: 3em;
+	margin: 20px 0 20px 3em;
+}
+
+footer p {
+	font-size: 1.1rem;
+}
+
+footer > div {
+	margin: 0 20px;
+}
+
+@media (min-width: 1050px) {
+	footer {
+		display: grid;
+		grid-template-columns: 33% 33% 33%;
+		font-size: 0.8em;
+	}
+	
+	footer > a:first-child {
+		margin: auto;
+	}
+	
+	footer > a:first-child img {
+		display: block;
+		width: 11em;
+	}
+	
+	footer > div {
+		text-align: center;
+	}
+	
+	footer > div p {
+		margin: 5px auto;
+	}
+	
+	footer > div:last-child {
+		position: initial;
+		grid-area: 2 / 1 / 2 / 4;
+		margin: auto;
+	}
+	
+	footer #reseaux img{
+		position: relative;
+		width: 2.5em;
+		left: -30px;
+		margin-top: 15px;
+	}
+	
+	footer > div:nth-child(3){
+		display: flex;
+		flex-direction: column;
+	}
+}

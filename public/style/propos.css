@@ -1,0 +1,96 @@
+.row div:nth-child(2) {
+	text-align: center;
+}
+
+main p:last-child {
+	background-color: #f0DDC9;
+	padding: 30px;
+	border-radius: 10px;
+	color: #51816a;
+	max-width: 800px;
+	margin-bottom: 100px;
+}
+
+#scotchHaut, #scotchBas {
+	position: absolute;
+	visibility: hidden;
+}
+
+.row img {
+	margin: 100px 0;
+}
+
+/* main article > div img {
+	width: 95%;
+	border-radius: 0 40px;
+	box-shadow: -20px -20px 5px #f0DDC9;
+} */
+
+@media (min-width: 900px) {
+	article {
+		display: grid;
+		grid-template-columns: 50% 50%;
+		max-width: 2000px;
+		margin: 0 auto 150px;
+	}
+
+	article p:first-child {
+		text-align: justify;
+		width: 80%;
+		max-width: 800px;
+	}
+
+	main article > div {
+		align-content: center;
+		padding: 20px;
+	}
+
+	main p:last-child {
+		margin: auto;
+		margin-bottom: 5em;
+		width: 50%;
+	}
+}
+
+@media (min-width: 1200px) {
+	.image-scotch {
+		position: relative;
+	}
+
+	#presentation {
+		max-width: 90%;
+	}
+	
+	#scotchHaut, #scotchBas {
+		visibility: visible;
+		width: 25%;
+		rotate: 50deg;
+	}
+	
+	#scotchHaut {
+		right: -5%;
+	}
+	
+	#scotchBas {
+		left: -5%;
+		bottom: 0;
+	}
+}
+
+		/* - - - - - - - */
+		/* image de fond */
+		/* - - - - - - - */
+
+header {
+	position: relative;
+	width: 100%;
+	background: url('../Image/propos/main-bebe.jpg') center / cover no-repeat;
+	height: 80vh;
+	margin-bottom: 20vh;
+}
+
+.bu-def:before {
+	width: 10%;
+	top: 10px;
+	left: 16px;
+}

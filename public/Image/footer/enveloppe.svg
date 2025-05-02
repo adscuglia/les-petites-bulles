@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.38 11.97">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-linejoin: bevel;
+      }
+
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke: #1d1d1b;
+        stroke-width: .5px;
+      }
+
+      .cls-2 {
+        stroke-miterlimit: 10;
+      }
+    </style>
+  </defs>
+  <g id="Calque_2-2" data-name="Calque_2">
+    <g>
+      <rect class="cls-2" x=".25" y=".25" width="16.88" height="11.47"/>
+      <polygon class="cls-1" points="8.69 8.87 17.13 .25 .25 .25 8.69 8.87"/>
+      <polygon class="cls-1" points="11.43 6.07 8.69 8.87 5.95 6.07 .25 9.92 .25 11.72 .25 11.72 .25 11.72 17.13 11.72 17.13 9.92 11.43 6.07"/>
+    </g>
+  </g>
+</svg>

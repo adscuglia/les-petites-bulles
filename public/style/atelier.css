@@ -1,0 +1,142 @@
+section:first-child p {
+	color: white;
+	margin-bottom: 50px;
+}
+
+.image-scotch {
+	position: relative;
+	width: 35vh;
+}
+
+section:first-child .scotchHaut, section:first-child .scotchBas {
+	position: absolute;
+	visibility: hidden;
+}
+
+section:first-child .align {
+	margin: auto;
+}
+
+section:first-child {
+	margin-bottom: 30px;
+}
+
+#affiche {
+	width: 35vh;
+}
+
+h3 {
+	color: white;
+	margin: 80px 0 30px;
+}
+
+article .uk-panel {
+	width: 25%;
+	min-width: 250px;
+	max-width: 700px;
+}
+
+.uk-tab {
+	display: inline-flex;
+	padding-bottom: 10px;
+	border-bottom: 2px solid #51816a!important;
+	margin: auto;
+}
+
+article {
+	width: 80%;
+	margin: 20px auto;
+}
+
+	/* gerer les boutons switch */
+
+main ul {
+	display: flex;
+	justify-content: center;
+}
+
+main ul li a:hover, main .date .uk-active a, .uk-subnav-pill > .uk-active a  {
+	background-color: #51816a;
+	color: #f0DDC9!important;
+}
+
+main ul li a{
+	color: #51816a!important;
+}
+
+.uk-subnav-pill > li a:hover {
+    background-color: #226D68;
+}
+
+.uk-grid {
+	margin-bottom: 70px;
+}
+
+@media (min-width: 700px) {
+	section:first-child .scotchHaut, section:first-child .scotchBas {
+		visibility: visible;
+		width: 150px;
+	}
+	
+	section:first-child .scotchHaut {
+		top: -15px;
+		right: -80px;
+		rotate: 50deg;
+	}
+	
+	section:first-child .scotchBas {
+		left: -80px;
+		bottom: -15px;
+		rotate: 50deg;
+	}
+}
+
+@media (min-width: 1280px) {
+	article .uk-panel {
+		object-fit: contain;
+	}
+	section:first-child{
+		display: flex;
+	}
+
+	section:first-child p {
+		margin: 30px;
+		max-width: 700px;
+	}
+
+	.uk-switcher {
+		margin: auto;
+	}
+	
+	h3 {
+		margin: 0 0 30px;
+	}
+}
+
+@media (max-width: 740px) {
+	article p {
+		display: none;
+	}
+}
+
+		/* - - - - - - - */
+		/* image de fond */
+		/* - - - - - - - */
+
+header {
+	position: relative;
+	width: 100%;
+	background: url('../Image/atelier/presentation-coeur-fini.jpg') center / cover no-repeat;
+	height: 100vh;
+	margin-bottom: 10vh;
+}
+
+.uk-switcher {
+	width: 80%;
+}
+
+@media (max-width: 960px) {
+	.uk-switcher {
+		margin: auto;
+	}
+}

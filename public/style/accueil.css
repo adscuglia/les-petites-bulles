@@ -1,0 +1,86 @@
+header {
+	position: relative;
+	width: 100%;
+	background: url('../Image/accueil/Image-accueil.jpg') center / cover no-repeat;
+	height: 100vh;
+}
+
+section h3 {
+	text-align: center;
+}
+
+.divise2 {
+	display: grid;
+	align-items: center;
+}
+
+.image-scotch {
+	display: flex;
+	position: relative;
+	max-width: 800px;
+	justify-content: center;
+	margin: 70px auto;
+}
+
+.image-scotch .photo {
+	width: 70%;
+	max-width: 600px;
+}
+
+.image-scotch .scotchHaut,.image-scotch .scotchBas {
+	position: absolute;
+	width: 25%;
+}
+
+.scotchHaut {
+	right: 3%;
+	rotate: 50deg;
+}
+
+.scotchBas {
+	bottom: 0;
+	left: 3%;
+	rotate: 50deg;
+}
+
+.divise2 .align{
+	margin-top: 20px;
+}
+
+.divise2 button {
+	margin: 10px 20px;
+}
+
+@media (min-width: 960px) {
+	.divise2 {
+		grid-template-columns: 50% 50%;
+	}
+
+	.divise2 p {
+		margin: 0 50px;
+	}
+}
+
+.uk-card {
+	background-color: #51816a;
+	border-radius: 10px;
+}
+
+.uk-card-media-top img{
+	border-radius: 10px 10px 0 0;
+}
+
+.uk-card-body h4 {
+	color: #F0DDC9;
+	font-size: 2rem;
+	font-weight: 700;
+	font-family: "Pompiere", serif;
+	margin: -20px 0 10px;
+}
+
+section .uk-card-body p{
+	color: white;
+	list-style-type: none;
+	padding-left: 0;
+	text-align: left;
+}

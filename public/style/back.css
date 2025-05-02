@@ -1,0 +1,103 @@
+body {
+    background-color: #51816a;
+}
+
+h1 {
+    text-align: center;
+    color: #f0DDC9;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+header img {
+    width: 200px;
+}
+
+.align {
+    text-align: center;
+}
+
+input {
+    margin-bottom: 20px;
+    border: none;
+}
+
+input[type = 'submit'], input[type ='button']{
+    background-color: #51816a;
+    color : #f0DDC9;
+    padding: 10px 20px;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #3b5f50;
+}
+
+select, button {
+    font-size: 1.5em;
+    padding: 10px;
+    text-align: center;
+}
+
+button {
+    margin-left: 50px;
+}
+
+.infos {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0DDC9;
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+thead {
+    background-color: #51816a;
+    color: #f0DDC9;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+input.bu-sec {
+    display: flex;
+    background-color: #f0DDC9;
+    color: #51816a;
+    margin: 20px auto;
+    padding: 15px;
+    justify-content: center;
+}
+
+.grille {
+    display: flex;
+	margin: 50px auto 0;
+    gap: 20px;
+}
+
+img {
+	width: 200px;
+	height: 200px;
+}

@@ -1,0 +1,75 @@
+body {
+	background-color: #51816a;
+}
+
+.grille {
+	margin: 0 auto;
+	padding: 0 15px;
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 20px;
+}
+
+.carte {
+	width: 100%;
+	max-width: 320px;
+	margin: 0 auto;
+	border-radius: 10px;
+	overflow: hidden;
+	background-color: #F0DDC9;
+	transition: transform 0.2s ease;
+}
+
+.carte:hover {
+	transform: translateY(-5px);
+	cursor: pointer;
+}
+
+.image img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+.contenu {
+	padding: 12px;
+}
+
+.contenu h4 {
+	font-weight: 600;
+	font-size: 1.5rem;
+	font-family: "Pompiere", serif;
+	text-align: center;
+	color: #51816a;
+}
+
+.contenu p {
+	font-size: 0.95rem;
+	color: #555;
+	text-align: left;
+	margin: 0 10px;
+}
+
+main {
+	margin-bottom: 100px;
+}
+
+@media (min-width: 640px) {
+	.grille {
+	  grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (min-width: 960px) {
+	.grille {
+		max-width: 1200px;
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media (min-width: 1700px) {
+	.grille {
+		max-width: 1800px;
+		grid-template-columns: repeat(4, 1fr);
+	}
+}

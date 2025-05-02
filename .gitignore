@@ -1,0 +1,5 @@
+# Fichiers sensibles
+controller/config.php
+
+# les fichiers de la bdd 
+assets/

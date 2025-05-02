@@ -1,0 +1,143 @@
+.align {
+	text-align: center;
+}
+
+.carousel-item img{
+	object-fit: contain;
+	height: 500px;
+}
+
+main p {
+	padding: 5% 10%;
+}
+
+#encours p {
+	background-color: #51816ac4;
+	border-radius: 10px 50px;
+	color: #f0DDC9;
+	padding: 80px 40px;
+	align-self: center;
+}
+
+#encours {
+	padding: 3rem 0;
+	margin: 80px 0;
+	background: #f0DDC9;
+}
+
+#encours img {
+	position: relative;
+	width: 60%;
+	max-width: 500px;
+	left: 25%;
+}
+
+#encours h2{
+	color: #51816ac4;
+}
+
+#encours section {
+	margin-bottom: 100px;
+}
+
+article .uk-panel {
+	width: 25%;
+	min-width: 250px;
+	max-width: 700px;
+}
+
+article {
+	width: 80%;
+	margin: 20px auto;
+}
+
+main ul {
+	display: flex;
+	justify-content: center;
+}
+
+main ul li a {
+	color: black!important;
+}
+
+main .uk-active a{
+	color: #f0DDC9!important;
+}
+
+h1 {
+	position: relative;
+	z-index: 2;
+	color: #f0DDC9;
+	font-size: 2.5rem;
+	justify-content: center;
+	top: 30vh;
+}
+
+@media (min-width: 960px) {
+	article .uk-panel {
+		object-fit: contain;
+	}
+	#encours section{
+		display: grid;
+		grid-template-columns: 50% 50%;
+		max-width: 2000px;
+		margin: auto;
+	}
+	#encours p {
+		max-width: 600px;
+	}
+	#encours button {
+		margin-top: 50px;
+	}
+	h1 {
+		font-size: 4rem;
+		top: 50vh;
+	}
+	
+}
+
+@media (max-width: 740px) {
+	article p {
+		display: none;
+	}
+}
+
+		/* - - - - - - */
+		/* fondu image */
+		/* - - - - - - */
+
+header {
+	position: relative;
+	width: 100%;
+	background: url('../Image/atelier/coeur/presentation_coussin.jpg') center / cover no-repeat;
+	height: 100vh;
+	margin-bottom: 10vh;
+}
+
+header::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to bottom, rgba(81, 129, 106, 0.8) 0%, rgba(81,129,106,0.4) 20%,rgba(81, 129, 106, 0.6) 60%, rgba(81, 129, 106, 1) 100%);
+	pointer-events: none;
+	z-index: 1;
+}
+
+nav {
+	position: relative;
+	z-index: 3;
+}
+
+
+.uk-switcher {
+	width: 80%;
+}
+
+@media (max-width: 960px) {
+	.uk-switcher {
+		margin: auto;
+	}
+}
