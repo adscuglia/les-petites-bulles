@@ -20,3 +20,5 @@ Un site vitrine dédié aux ateliers de couture pour enfants, avec une réservat
 - HTML / CSS
 - JavaScript
 - Hébergement : o2switch
+
+![Page d'accueil](public/Image/accueil/fond.jpeg)
