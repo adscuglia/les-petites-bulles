@@ -54,7 +54,7 @@ form input {
     text-align: center;
 }
 
-.formulaire input, textarea {
+.formulaire input:not([type="radio"]), textarea {
     max-width: 96.5%;
     width: 96.5%;
     padding: 10px;
@@ -63,6 +63,14 @@ form input {
     border-radius: 5px;
     font-size: 16px;
     margin-top: 5px;
+}
+
+.formulaire .radio {
+    font-size : 1rem;
+}
+
+#authorisation {
+    margin-bottom : 10px;
 }
 
 .formulaire input[type="submit"], .formulaire input[type="button"] {
@@ -80,6 +88,10 @@ form input {
 
 .formulaire input:last-child {
     margin-top: 30px;
+}
+
+fieldset {
+    color: #51816a;
 }
 
 .boutton {

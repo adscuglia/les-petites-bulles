@@ -48,7 +48,7 @@
 
 	<main>
 		<div class="formulaire">
-			<form action="../controller/reservation.php" method="post">
+			<form action="../view/enfants.php" method="post">
 				<label for="atelier">Date d'inscription</label>
 				<select name="atelier">
 					<option value="--Choisir un atelier--"></option>
@@ -73,10 +73,6 @@
 				<input type="text" id="prenom" name="prenom" required>
 				<br>
 
-				<label for="Date_naissance">Date de naissance</label>
-				<input type=date id="Date_naissance" name="Date_naissance">
-				<br>
-				
 				<label for="telephone">Téléphone</label>
 				<div class="tel-group">
 					<div class="prefixe-container">
