@@ -1,6 +1,6 @@
 <?php
 	$page = 'tissus';
-	$debutTitre = 'TOUT NOS ';
+	$debutTitre = 'LES ';
 	$finTitre = 'TISSUS';
 	require_once 'layouts/header.php';
 	require '../controller/bdd.php';

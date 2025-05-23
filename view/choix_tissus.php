@@ -52,7 +52,7 @@
 					<a href="../index.php"><img src="../public/Image/all/logo.svg" alt="logo LPB" class="logo"></a>
 					<a href="./atelier.php">LES ATELIERS</a>
 					<a href="./tissus.php">TISSUS</a>
-					<a href="./contact.html">CONTACT</a>
+					<a href="./contact.php">CONTACT</a>
 				</div>
 			</div>
 		</nav>

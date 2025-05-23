@@ -6,6 +6,7 @@
 		$post = [
 			'Nom_produit' => $_POST['nom'],
 			'descriptif_produit' => $_POST['descriptif'],
+			'id_categorie_produit' => $_POST['categorie'],
 			'prix_TTC' => $_POST['prix'],
 		];
 		$produit = new ProduitManager($bdd);
@@ -13,7 +14,6 @@
 		$newProduit->hydrate($post);
 		$produit->add($newProduit);
 
-		$_SESSION['dernier_choix'] = 'produit';
 		$_SESSION['message'] = 'Le produit est bien enregistré';
 
 		header('Location: ../view/ajout.php?page=nouveau');
@@ -44,6 +44,21 @@
 
 		$_SESSION['message'] = $message;
 		header('Location: ../view/ajout.php?page=produit');
+		exit;
+	}
+
+		if (isset($_POST['submit']) && $_GET['ajout'] === "categorie") {
+		$post = [
+			'nom_categorie_produit' => $_POST['nom'],
+		];
+		$categories = new Categorie_produitManager($bdd);
+		$newCategorie_produit = new Categorie_produit();
+		$newCategorie_produit->hydrate($post);
+		$categories->add($newCategorie_produit);
+
+		$_SESSION['message'] = 'Le produit est bien enregistré';
+
+		header('Location: ../view/ajout.php?page=nouveau');
 		exit;
 	}
 

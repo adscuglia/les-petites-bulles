@@ -66,7 +66,7 @@
 				choix.addEventListener('change', ()=> {
 					const valeur = choix.value;
 					if (valeur === "photo") {
-						chargerProduit();
+						chargerPhotoProduit();
 					}
 					else if (valeur === "produit") {
 						fetch('../model/ajout_produit.php')
@@ -74,33 +74,16 @@
 						.then(data => {
 							fichier.innerHTML = data;
 						})
+					}
+					else if (valeur === "categorie") {
+						fetch('../model/ajout_categorie_produit.php')
+							.then(response => response.text())
+							.then(data => {
+								fichier.innerHTML = data;
+							})
 					}
 				});
 		})
-	}
-
-	function chargerProduit() {
-		fetch('../model/ajout_photo_produit.php')
-			.then(response => response.text())
-			.then(data => {
-				fichier.innerHTML = data;
-
-				const choix = document.querySelector("select[name=choix]");
-
-				choix.addEventListener('change', ()=> {
-					const valeur = choix.value;
-					if (valeur === "photo") {
-						chargerProduit();
-					}
-					else if (valeur === "produit") {
-						fetch('../model/ajout_produit.php')
-						.then(response => response.text())
-						.then(data => {
-							fichier.innerHTML = data;
-						})
-					}
-				});
-			})
 	}
 
 	function chargerCoffret() {
@@ -137,7 +120,7 @@
 		chargerTissus();
 	}
 	else if (page === "produit") {
-		chargerProduit();
+				chargerNouveauProduit();
 	}
 	else if (page === 'nouveau') {
 		chargerNouveauProduit();

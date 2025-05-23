@@ -4,7 +4,7 @@
 
 main p:last-child {
 	background-color: #f0DDC9;
-	padding: 30px;
+	padding-top: 30px;
 	border-radius: 10px;
 	color: #51816a;
 	max-width: 800px;
@@ -35,7 +35,7 @@ main p:last-child {
 	}
 
 	article p:first-child {
-		text-align: justify;
+		text-align: center;
 		width: 80%;
 		max-width: 800px;
 	}
@@ -84,7 +84,7 @@ main p:last-child {
 header {
 	position: relative;
 	width: 100%;
-	background: url('../Image/propos/main-bebe.jpg') center / cover no-repeat;
+	background: url('../Image/header/propos.jpg') center / cover no-repeat;
 	height: 80vh;
 	margin-bottom: 20vh;
 }

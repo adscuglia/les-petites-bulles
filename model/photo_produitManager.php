@@ -57,7 +57,7 @@
 		}
 
 		public function getDernierePhotoAllProduit() {
-			$req = $this->bdd->query('SELECT * FROM produit pr LEFT JOIN photo_produit ph ON ph.n_produit = pr.n_produit WHERE ph.id_photo_produit = ( SELECT MAX(ph2.id_photo_produit) FROM photo_produit ph2 WHERE ph2.n_produit = pr.n_produit)');
+			$req = $this->bdd->query('SELECT * FROM produit pr LEFT JOIN photo_produit ph ON ph.n_produit = pr.n_produit WHERE ph.id_photo_produit = ( SELECT MIN(ph2.id_photo_produit) FROM photo_produit ph2 WHERE ph2.n_produit = pr.n_produit)');
 
 			return $req->fetchAll();
 		}

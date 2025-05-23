@@ -22,8 +22,9 @@
 			if ($_GET['page'] === "produit" || $_GET['page'] === "nouveau") {
 				echo '<div class="align">';
         			echo '<select class="choix" name="choix">';
-            			echo '<option value="photo">Ajout photo</option>';
             			echo '<option value="produit">Ajouter un produit</option>';
+            			echo '<option value="photo">Ajout photo</option>';
+            			echo '<option value="categorie">Ajout categorie</option>';
         		echo '</select> </div>';
 			}
 			else if ($_GET['page'] === "tissus") {
@@ -35,7 +36,7 @@
 			}
 		?>
 
-			<!-- enctype pour envoyer le fichier au serveur et el stocker temporairement -->
+			<!-- enctype pour envoyer le fichier au serveur et le stocker temporairement -->
 		<div id="fichier">
 
 		</div>

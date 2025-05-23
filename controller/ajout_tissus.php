@@ -16,7 +16,7 @@
 				'nom_tissus' => $_POST['nom'],
 				'url_tissus' => $nomFichier,
 				'ID_matiere' => $_POST['matiere'],
-				'categorie' => $_POST['choix-tissus'],
+				'id_categorie' => $_POST['categorie']
 			];
 			$tissus->hydrate($post);
 			$tissusManager->add($tissus);
@@ -26,5 +26,5 @@
 			$message = 'erreur lors du chargement de l\'image';
 		}
 	}
-	header('Location: ../view/ajout.php?page=produit');
+	header('Location: ../view/ajout.php?page=tissus');
 ?>

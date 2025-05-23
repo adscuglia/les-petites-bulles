@@ -26,6 +26,7 @@
 	require __DIR__ . '/../model/integrerManager.php';
 	require __DIR__ . '/../model/coffretManager.php';
 	require __DIR__ . '/../model/categorieManager.php';
+	require __DIR__ . '/../model/categorie_produitManager.php';
 	
 
     function anneeSQL($date) {

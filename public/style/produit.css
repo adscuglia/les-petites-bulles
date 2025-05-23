@@ -51,8 +51,10 @@ footer h4 {
 	margin: 0 auto;
 	padding: 0 15px;
 	display: grid;
-	grid-template-columns: 1fr;
 	gap: 20px;
+	text-align: center;
+	margin: 40px auto;
+	max-width: 700px;
 }
 
 .carte {
@@ -65,9 +67,8 @@ footer h4 {
 }
 
 .image img {
-	width: 100%;
-	height: auto;
-	max-height: 400px;
+	width: 300px;
+	height: 300px;
 	display: block;
 }
 
@@ -102,21 +103,36 @@ main {
 	background-color: #3f6754;
 }
 
+.bu-def {
+    position: relative;
+    padding: 20px;
+    margin-top: 20px;
+    margin-left: 50px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    background-color: #F0DDC9;
+    color: #51816a;
+    cursor: pointer;
+    border: none;
+}
+
+.bu-def:hover {
+	background-color: #d8c3ac;
+}
+
 header a img {
 	width: 8rem;
 }
 
-li {
-	list-style: none;
-    padding-top: 10px;
-    border-bottom: 1px solid #51816a;
-    font-size: 1.2rem;
-    color: white;
-    text-align: center;
+ul {
+  margin: 0;
+  padding-left: 0;
 }
 
-li:last-child {
-    border-bottom: none; /* pas de trait sous le dernier */
+li {
+    text-align: left;
+    list-style: none;
+    color: white;
 }
 
 	/* - - - - - -- - */
@@ -351,14 +367,77 @@ li:last-child {
 
 @media (min-width: 960px) {
 	.grille {
-		max-width: 1200px;
 		grid-template-columns: repeat(3, 1fr);
 	}
 }
 
-@media (min-width: 1700px) {
+@media (min-width: 1400px) {
 	.grille {
-		max-width: 1800px;
+	    max-width : 1700px;
 		grid-template-columns: repeat(4, 1fr);
+	}
+}
+
+.fiche-produit {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	max-width: 1200px;
+	margin: 100px auto;
+}
+
+.fiche-gauche {
+	flex: 1;
+	text-align: center;
+}
+
+.fiche-image-principale img {
+	width: 100%;
+	max-height: 350px;
+	border-radius: 10px;
+	object-fit: contain;
+}
+
+.fiche-miniatures {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 10px;
+	margin-top: 15px;
+}
+
+.fiche-miniature {
+	width: 80px;
+	height: 80px;
+	cursor: pointer;
+	border-radius: 5px;
+	object-fit: cover;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.fiche-miniature:hover {
+	transform: scale(1.1);
+	box-shadow: 0 0 8px #00000033;
+}
+
+.fiche-droite {
+	flex: 1;
+	color: white;
+	font-size: 1rem;
+	padding: 10px;
+}
+
+.fiche-droite h3 {
+    text-align: start;
+	margin-bottom: 10px;
+	font-size: 2.5rem;
+	color: #F0DDC9;
+	font-family: "Pompiere", serif;
+}
+
+@media (min-width: 900px) {
+	.fiche-produit {
+		flex-direction: row;
+		align-items: flex-start;
 	}
 }

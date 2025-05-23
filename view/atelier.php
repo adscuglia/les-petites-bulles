@@ -1,7 +1,9 @@
 <?php
 	$page = 'atelier';
-	$debutTitre = "DECOUVREZ LES ";
-	$finTitre = 'ATELIER';
+	$titre = "Ateliers pour enfants - L'atelier des petites bulles";
+	$debutTitre = "DECOUVREZ <br>";
+	$finTitre = 'LES ATELIERS';
+	$description = "L'Atelier des Petites Bulles à Basse-Ham (Moselle) propose des ateliers de couture créatifs pour enfants a partir de 8 ans. Initiation aux techniques textiles dans un cadre ludique. Réservation en ligne. Activités manuelles éducatives près de Thionville et Metz.";
 	require_once 'layouts/header.php';
 	require '../controller/bdd.php';
 ?>
@@ -23,7 +25,9 @@
 				<div class="align">
 					<h3>Envie de <span class="carton">créativité</span> ?</h3>  
 					<p>
-						Chaque mois, nos petits couturiers (dès <span class="carton">8 ans</span>) réalisent une création unique autour d’un <span class="carton">thème de saison</span> ou de fête. Retrouvez-nous au centre socio-culturel de <span class="carton">Basse-Ham</span> pour un atelier convivial !<br> <span class="carton">Participation : 22 €</span> (goûter inclus !)  
+						Chaque mois, l'Atelier des Petites Bulles<br> propose  des <span class="carton">ateliers couture</span><br> enfants (<span class="carton">dès 8ans</span>)
+						ou adultes,<br> sur un thème de <span class="carton">saison</span> ou de <span class="carton">fête</span>.<br><br> Retrouvez-moi à <span class="carton">Basse-Ham</span> <br> au Centre Socioculturel<br>pour un moment <span class="carton">convivial</span> !<br><br>
+					    Participation : 22 € <span class="carton"> ! GOÛTER OFFERT !</span>
 					</p>
 
 					<button onclick="window.location.href = './reservation.php'" class="bu-def">RESERVER</button>
@@ -31,7 +35,7 @@
 		</section>
 
 		<section>
-    <h2>NOS ATELIERS PRÉCÉDENTS</h2>
+    <h2>LES ATELIERS PRÉCÉDENTS</h2>
     <div class="uk-slider-container" uk-grid>
         <!-- Onglets des années -->
         <div class="uk-width-1-1@m">

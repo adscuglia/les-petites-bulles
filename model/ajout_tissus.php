@@ -15,7 +15,7 @@
 				<input type="text" name="nom"  required>
 
 				<label>Categorie</label>
-				<select class="choix-tissus">
+				<select name="categorie" class="choix-tissus">
 					<?php
 						foreach($categories as $categorie) {
 							echo '<option value="'.$categorie['id_categorie'].'">'.ucfirst($categorie['nom_categorie']).'</option>';
@@ -30,10 +30,10 @@
 
 				<input type="submit" name="submit">
 				<input type="button" onclick="window.location.href = 'back_office.php'" value="Retour au back office">
-
 			</div>
 		</div>
 	</form>
+
 
 <div class="grille">
 	<?php 

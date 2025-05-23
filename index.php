@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="FR">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -46,25 +46,28 @@
 				<div class="navlinks-container">
 					<a href="index.php">ACCUEIL</a>
 					<a href="view/propos.php">A PROPOS</a>
-					<a href="view/creation.php">PRODUITS</a>
+					<a href="view/creation.php">CREATIONS</a>
 					<a href="index.php"><img src="public/Image/all/logo.svg" alt="logo LPB" class="logo"></a>
-					<a href="view/atelier.php">LES ATELIERS</a>
+					<a href="view/atelier.php">ATELIERS</a>
 					<a href="view/tissus.php">TISSUS</a>
 					<a href="view/contact.php">CONTACT</a>
 				</div>
 			</div>
 		</nav>
-		<h1>L'ATELIER DES <span class="carton">PETITES BULLES</span></h1>
-		<div class="header-bu">
-			<button onclick="window.location.href = 'view/creation.php'" class="bu-def" id="produit">NOS PRODUITS</button>
-			<button onclick="window.location.href = 'view/atelier.php'" class="bu-def" id="atelier">NOS ATELIERS</button>
+		<div class="header-gauche">
+			<h1>L'ATELIER DES <span class="carton">PETITES BULLES</span></h1>
+			<div class="header-bu-index">
+				<button onclick="window.location.href = 'view/creation.php'" class="bu-def" id="produit">LES CREATIONS </button>
+				<button onclick="window.location.href = 'view/atelier.php'" class="bu-def" id="atelier">LES ATELIERS</button>
+			</div>
 		</div>
 	</header>
 	
 	<main>
 		<section>
 			<p>
-				Chez l'atelier des petites bulles, nous créons à la main des articles pour bébés et parents, pensés pour simplifier la parentalité avec style et douceur. chaque piece est uniques et reflete vos envies. Nous proposons également des ateliers de couture pour enfants, où ils peuvent découvrir la couture et développer leur créativité
+                Bienvenue dans l’univers doux et créatif<br> de <span class="carton">l’Atelier des Petites Bulles</span>,<br>
+                où les tissus prennent vie<br> pour raconter de <span class="carton">jolies histoires</span>.
 			</p>
 		</section>
 
@@ -90,11 +93,11 @@
 			<div class="divise2">
 				<div>
 					<p>
-						Vous cherchez une <span class="carton">activité ludique</span> pour vos enfants ?<br>  
-						Chaque semaine, <span class="carton">l'atelier des Petites Bulles</span> accueille vos enfants pour des <span class="carton">ateliers créatifs de couture</span> !<br>  
-						Grâce à ces cours, ils apprendront à <span class="carton">coudre</span> tout en réalisant de petites créations amusantes et en développant leur <span class="carton">créativité</span>.  
-						Les enfants repartiront avec des <span class="carton">pièces uniques</span>.<br>  
-						Une activité <span class="carton">ludique et enrichissante</span> pour les enfants à partir de <span class="carton">6 ans</span>.  
+						Vous êtes à la recherche d'une <span class="carton">activité <br>ludique et enrichissante</span>  pour vos enfants ?<br><br>
+						L'Atelier des Petites Bulles <br> accueille vos couturiers en herbe <span class="carton">dès 8 ans</span>, <br>
+						pour des <span class="carton">ateliers créatifs</span> de couture<br> où ils apprennent à coudre en <span class="carton">s'amusant</span> <br> et en développant leur <span class="carton">créativité</span>. <br><br>
+						A l'issue de l'<span class="carton">atelier</span> couture,<br> chaque enfant repart avec sa <span class="carton">création</span>.
+						
 					</p>
 
 					<div class="align">
@@ -118,7 +121,7 @@
 		<div>
 			<h4>L'atelier des petites bulles </h4>
 			<p>
-				Des accessoires uniques et faits mains pour accompagner chaque moment de votre bébé et offrir des cadeaux personnalisés inoubliable.
+				Ici, l’amour du fait-main<br>donne vie à des pièces uniques,<br> où chaque détail raconte<br> un peu de votre histoire.
 			</p>
 		</div>
 		
@@ -126,14 +129,14 @@
 			<h4>Contact</h4>
 
 			<div>
-				<img src="public/Image/footer/position-vert.svg" alt="logo position"> Basse-ham (57970) <br>
+				<img src="public/Image/footer/position-vert.svg" alt="logo position"> Basse-Ham (57970) <br>
 			</div>
 			
 			<div>
 				<img src="public/Image/footer/telephone-vert.svg" alt="tel"> +33 6 03 71 18 72 <br>
 			</div>
 			
-			<a href="latelierdespetitesbulles@gmail.com" target="_blank"><img src="public/Image/footer/courrier-vert.svg" alt="courrier"> latelierdespetitesbulles@gmail.com</a>
+			<a href="mailto:contact@latelierdespetitesbulles.fr" target="_blank"><img src="public/Image/footer/courrier-vert.svg" alt="courrier"> contact@latelierdespetitesbulles.fr</a>
 			<div id="reseaux"> 
 				<a class="logosupp" href="https://m.facebook.com/100088395311775/" target="_blank"><img src="public/Image/footer/facebook.svg" alt="logo facebook" ></a>
 				<a class="logosupp" href="https://www.instagram.com/latelier.des.petites.bulles/" target="_blank"><img src="public/Image/footer/instagram.svg" alt="logo instagram"></a>
@@ -141,7 +144,7 @@
 		</div>
 		
 		<div>
-			Copyright © 2024 - <a href="https://www.linkedin.com/in/adrien-scuglia-80320b312/recent-activity/all/" target="_blank">SCUGLIA Adrien - </a> <a href="view/connexion.php">Administrateur</a>
+			Copyright © 2024 - <a href="https://www.linkedin.com/in/adrien-scuglia-80320b312/recent-activity/all/" target="_blank">SCUGLIA Adrien</a> - <a href="view/connexion.php">Administrateur</a> - <a href="view/mentionLegale.html" target="_blank" >Mentions légales</a> - <a href="view/politique.html" target="_blank">Politique de confidentialité</a>
 		</div>
 	</footer>
 

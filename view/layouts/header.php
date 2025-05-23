@@ -1,19 +1,37 @@
 <!DOCTYPE html>
-<html lang="FR">
-	<head>
-		<meta charset="UTF-8">
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.21.16/dist/css/uikit.min.css">
-		<script src="https://cdn.jsdelivr.net/npm/uikit@3.21.16/dist/js/uikit.min.js"></script>
-		<link rel="stylesheet" href="../public/style/header.css">
-		<link rel="stylesheet" href="../public/style/<?php echo $page ?>.css">
-		<link rel="stylesheet" href="../public/style/footer.css">
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.21.16/dist/css/uikit.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.21.16/dist/js/uikit.min.js"></script>
+    <link rel="stylesheet" href="../public/style/header.css">
+    <link rel="stylesheet" href="../public/style/<?php echo $page ?>.css">
+    <link rel="stylesheet" href="../public/style/footer.css">
 
-			<!-- Favicon -->
-		<link rel="icon" href="../public/Image/all/logo.svg" type="logo/svg">
-		
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title><?php echo $page ?></title>
-	</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Favicon -->
+    <link rel="icon" href="../public/Image/all/logo.svg" type="image/svg+xml">
+
+    <?php if (isset($titre)) {
+        echo '<title>'. htmlspecialchars($titre) .'</title>';
+        echo '<meta property="og:title" content="'. htmlspecialchars($titre) .'">';
+    } else {
+        echo '<title>L\'atelier des petites bulles</title>';
+        echo '<meta property="og:title" content="L\'atelier des petites bulles">';
+    } ?>
+
+    <?php if (isset($description)) {
+        echo '<meta name="description" content="'. htmlspecialchars($description) .'">';
+        echo '<meta property="og:description" content="'. htmlspecialchars($description) .'">';
+    } ?>
+
+    <meta property="og:image" content="https://latelierdespetitesbulles.fr/public/Image/all/logo.svg">
+    <meta property="og:url" content="https://latelierdespetitesbulles.fr">
+    <meta property="og:type" content="website">
+
+    <meta name="google-site-verification" content="_fVBijaHzVfiT76MWN5uYAAz5Wu4STuJzVm123Vxk5Y" />
+</head>
 <body>
 
 	<header>
@@ -32,7 +50,7 @@
 					<a href="./propos.php">A PROPOS</a>
 					<a href="./creation.php">CREATIONS</a>
 					<a href="../index.php"><img src="../public/Image/all/logo.svg" alt="logo LPB" class="logo"></a>
-					<a href="./atelier.php">LES ATELIERS</a>
+					<a href="./atelier.php">ATELIERS</a>
 					<a href="./tissus.php">TISSUS</a>
 					<a href="./contact.php">CONTACT</a>
 				</div>

@@ -5,6 +5,8 @@
 		$num = $_GET['num'];
 		$photoProduitManager = new photo_produitManager($bdd);
 		$photos = $photoProduitManager->getPhotoAvecProduit($num);
+		$produitManager = new produitManager($bdd);
+		$produit = $produitManager->getProduitParNum($num);
 	}
 ?>
 
@@ -16,6 +18,8 @@
 		<script src="https://cdn.jsdelivr.net/npm/uikit@3.21.16/dist/js/uikit.min.js"></script>
 		<link rel="stylesheet" href="../public/style/produit.css">
 		<link rel="stylesheet" href="../public/style/footer.css">
+		
+		<link rel="icon" href="../public/Image/all/logo.svg" type="image/svg+xml">
 		
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>produit</title>
@@ -40,7 +44,7 @@
 					<a href="../index.php"><img src="../public/Image/all/logo.svg" alt="logo LPB" class="logo"></a>
 					<a href="./atelier.php">LES ATELIERS</a>
 					<a href="./tissus.php">TISSUS</a>
-					<a href="./contact.html">CONTACT</a>
+					<a href="./contact.php">CONTACT</a>
 				</div>
 			</div>
 		</nav>
@@ -48,22 +52,52 @@
 	</header>
 
 <main>
-	<div class="container">
-		<h2>Vous voulez le votre ?</h2>
-		<p>Demandez un devis personnalisé en sélectionnant vos tissus préférés.</p>
-		<input onclick="window.location.href='choix_tissus.php?num=<?php echo $_GET['num']; ?>'" class="bu-sec" type="button" value="Choisissez vos tissus">
+	<!--<div class="container">-->
+	<!--	<h2>Vous voulez le votre ?</h2>-->
+	<!--	<p>Demandez un devis personnalisé en sélectionnant vos tissus préférés.</p>-->
+	<!--</div>-->
+<div class="fiche-produit">
+	<div class="fiche-gauche">
+		<div class="fiche-image-principale">
+			<img id="mainImage" src="../public/Image/produit/<?php echo $photos[0]['url']; ?>" alt="Produit principal">
+		</div>
+
+		<div class="fiche-miniatures">
+			<?php foreach($photos as $photo): ?>
+				<img class="fiche-miniature" src="../public/Image/produit/<?php echo $photo['url']; ?>" alt="Miniature">
+			<?php endforeach; ?>
+		</div>
 	</div>
-	<div class="grille">
+
+	<div class="fiche-droite">
 		<?php
-			foreach($photos as $photo) {
-				echo '<div class="carte">';
-				echo '<div class="image">';
-					echo '<img src="../public/Image/produit/'.$photo['url'].'">';
-				echo '</div></div>';
-			}
+		    echo '<h3>'.$produit['nom_produit'].'</h3>' ;
+		    echo '<p>'.$produit['prix_TTC'].' €</p>';
+		    echo '<p>'.$produit['descriptif_produit'].'</p>';
 		?>
+        <ul>
+            <li>🌿 100% coton doux et naturel</li>
+            <li>✅ Tissus certifiés Oeko-Tex® </li>
+            <li>🤲 Fabriqué à la main avec passion</li>
+            <li>🎨 Personnalisation offerte (prénom, motif, couleur...)</li>
+        </ul>
+        <input onclick="window.location.href='choix_tissus.php?num=<?php echo $_GET['num']; ?>'" class="bu-def" type="button" value="Choisissez vos tissus">
 	</div>
+</div>
+
+
 </main>
+
+<script>
+	document.querySelectorAll('.fiche-miniature').forEach(miniature => {
+		miniature.addEventListener('click', () => {
+			const mainImage = document.getElementById('mainImage');
+			mainImage.src = miniature.src;
+			mainImage.alt = miniature.alt;
+		});
+	});
+</script>
+
 
 <?php
 	require_once 'layouts/footer.php';

@@ -1,7 +1,7 @@
 header {
 	position: relative;
 	width: 100%;
-	background: url('../Image/accueil/Image-accueil.jpg') center / cover no-repeat;
+	background: url('../Image/accueil/accueil-vert.jfif') center / cover no-repeat;
 	height: 100vh;
 }
 
@@ -83,4 +83,42 @@ section .uk-card-body p{
 	list-style-type: none;
 	padding-left: 0;
 	text-align: left;
+}
+
+.header-bu-index{
+	position: relative;
+	text-align: center;
+	top: 30vh;
+}
+
+@media (min-width: 1280px) {
+	header {
+		background: url('../Image/accueil/Accueil.png') center / cover no-repeat;;
+	}
+
+	.header-gauche {
+
+		width: 50%;
+	}
+	.header-gauche h1{
+		font-size: 3rem;
+		margin-bottom: 0;
+	}
+
+	.header-bu-index {
+		position: relative;
+		text-align: center;
+	}
+
+	.header-gauche .bu-def {
+		margin: 0 10px;
+	}
+}
+
+@media (min-width: 1700px) {
+	.header-gauche {
+		position: relative;
+		top: 10vh;
+	}
+
 }

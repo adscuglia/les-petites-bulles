@@ -3,12 +3,14 @@
 		private $n_produit;
 		private $nom_produit;
 		private $descriptif_produit;
+		private $id_categorie_produit;
 		private $prix_TTC;
 
 
 		public function n_produit() {return $this->n_produit;}
 		public function nom_produit() {return $this->nom_produit;}
 		public function descriptif_produit() {return $this->descriptif_produit;}
+		public function id_categorie_produit() {return $this->id_categorie_produit;}
 		public function prix_TTC() {return $this->prix_TTC;}
 
 		public function setN_produit($valeur) {
@@ -19,6 +21,9 @@
 		}
 		public function setDescriptif_produit($valeur) {
 			$this->descriptif_produit = $valeur;
+		}
+		public function setId_categorie_produit($valeur) {
+			$this->id_categorie_produit = $valeur;
 		}
 		public function setPrix_TTC($valeur) {
 			$this->prix_TTC = $valeur;
@@ -46,9 +51,10 @@
 		}
 
 		public function add(Produit $produit) {
-			$new_produit = $this->bdd->prepare('INSERT INTO produit(nom_produit, descriptif_produit, prix_TTC) VALUES (:nom, :descriptif, :prix)');
+			$new_produit = $this->bdd->prepare('INSERT INTO produit(nom_produit, descriptif_produit, id_categorie_produit, prix_TTC) VALUES (:nom, :descriptif, :id_categorie_produit, :prix)');
 			$new_produit->bindValue(':nom', $produit->nom_produit());
 			$new_produit->bindValue(':descriptif', $produit->descriptif_produit());
+			$new_produit->bindValue(':id_categorie_produit', $produit->id_categorie_produit());
 			$new_produit->bindValue(':prix', $produit->prix_TTC());
 			$new_produit->execute();
 		}
@@ -66,11 +72,12 @@
 		}
 
 		public function update(Produit $produit, $id) {
-			$req = $this->bdd->prepare('UPDATE produit SET nom_produit = :nom,descriptif_produit = :descriptif, prix_TTC = :prix WHERE n_produit = :num_produit');
+			$req = $this->bdd->prepare('UPDATE produit SET nom_produit = :nom,descriptif_produit = :descriptif, id_categorie_produit = :id_categorie_produit, prix_TTC = :prix WHERE n_produit = :num_produit');
 
 			$req->bindValue(':num_produit', $id);
 			$req->bindValue(':nom', $produit->nom_produit());
 			$req->bindValue(':descriptif', $produit->descriptif_produit());
+			$req->bindValue(':id_categorie_produit', $produit->id_categorie_produit());
 			$req->bindValue(':prix', $produit->prix_TTC());
 			$req->execute();
 		}

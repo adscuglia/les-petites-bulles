@@ -1,7 +1,7 @@
 header {
 	position: relative;
 	width: 100%;
-	background: url('../Image/header/tissubeige.png') center / cover no-repeat;
+	background: url('../Image/header/tissus.jpg') center / cover no-repeat;
 	height: 100vh;
 }
 
@@ -14,20 +14,11 @@ header {
 	row-gap: 80px;
 }
 
-.carte {
-	width: 100%;
-	max-width: 320px;
-	margin: 0 auto;
-	border-radius: 10px;
-	overflow: hidden;
-	background-color: #F0DDC9;
-	transition: transform 0.2s ease;
-}
+
 
 .image img {
-	width: 100%;
-	height: auto;
-	max-height: 400px;
+	width: 250px;
+	height: 250px;
 	display: block;
 }
 
@@ -114,12 +105,12 @@ select  {
 
 @media (min-width: 960px) {
 	.grille {
-		max-width: 1200px;
+
 		grid-template-columns: repeat(3, 1fr);
 	}
 }
 
-@media (min-width: 1700px) {
+@media (min-width: 1400px) {
 	.grille {
 		max-width: 1800px;
 		grid-template-columns: repeat(4, 1fr);

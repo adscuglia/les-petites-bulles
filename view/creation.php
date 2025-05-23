@@ -1,13 +1,16 @@
 <?php
+    $titre = "Produits artisanaux - L'atelier des petites bulles";
 	$page = 'creations';
-	$debutTitre = 'TOUT NOS ';
-	$finTitre = 'PRODUITS';
+	$debutTitre = 'LES ';
+    $finTitre = "CREATIONS";
+    $description = "Découvrez les créations artisanales de l'Atelier des Petites Bulles : des accessoires pour bébés et enfants, réalisés à la main avec soin à Basse-Ham.";
 	require_once 'layouts/header.php';
 	require '../controller/bdd.php';
 	$photoProduitManager = new photo_produitManager($bdd);
 	$photos = $photoProduitManager->getDernierePhotoAllProduit();
 	$produitManager = new ProduitManager($bdd);
 ?>
+
 
 <main>
 

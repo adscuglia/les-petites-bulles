@@ -1,14 +1,22 @@
 <?php
-	$page = 'propos';
-	$debutTitre = "A PROPOS DE ";
-	$finTitre = "L'ATELIER";
-	require_once 'layouts/header.php';
+    $page = 'propos';
+    $titre = "À propos - L'atelier des petites bulles";
+    $debutTitre = "A PROPOS ";
+    $finTitre = "DE L'ATELIER";
+    $description = "Découvrez l'histoire de l'Atelier des Petites Bulles, mon histoire, mes valeurs et surtout ma passion pour la création artisanale destinée aux enfants. à Basse-Ham en Moselle.";
+    require_once 'layouts/header.php';
 ?>
 
 	<main>
 			<article class="row">
 				<p>
-					Je suis maman de trois enfants et une grande fan de	couture. <span class="carton">Au fil du temps</span>, j'ai réalisé qu'il manquait des accessoires pour bébés et pour les parents à la fois pratiques et personnalisés. <span class="carton">J'ai donc lancé L'Atelier des Petites Bulles</span>, une petite entreprise dédiée à la création de pièces uniques pour les tout-petits, <span class="carton">avec l'amour du fait-main</span>. Chaque commande est une aventure créative où je m'efforce de répondre a vos attentes avec des <span class="carton">accessoires sur-mesure</span>.
+                    Je suis Marilyn, maman de 3 enfants.<br>
+                    Créatrice <span class="carton">passionnée</span> et <span class="carton">autodidacte</span><br> située à Basse-Ham dans l'<span class="carton">Est de la France</span>.<br><br>
+                    En <span class="carton">2014</span>, j’ai fait naître l’Atelier des Petites Bulles<br> avec l’envie de valoriser le <span class="carton">savoir-faire artisanal</span>,<br>
+                    de proposer des créations couture uniques,<br>
+                    <span class="carton">faites main</span> et personnalisables,<br> pour <span class="carton">petits et grands</span> rêveurs.<br><br>
+                    Je vous propose également des <span class="carton">ateliers</span><br> afin de <span class="carton">découvrir</span> la couture<br>
+                    et de développer votre <span class="carton">créativité</span>. 
 				</p>
 
 				<div class="image-scotch">
@@ -18,7 +26,8 @@
 				</div>
 			</article>
 			<p>
-				Chaque article est fait sur commande, offrant ainsi la possibilité de choisir les tissus, les couleurs et les motifs. Que vous souhaitiez un prénom brodé ou un design unique, chaque création est un reflet de votre imagination et de mon savoir-faire.
+			    Entièrement faite à la main,<br> chaque création est unique.<br>
+                Ses petites singularités témoignent<br> de son authenticité et de l’amour<br> avec lequel elle a été confectionnée.<br><br>
 			</p>
 			
 	</main>
