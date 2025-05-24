@@ -7,6 +7,8 @@
 		$photos = $photoProduitManager->getPhotoAvecProduit($num);
 		$produitManager = new produitManager($bdd);
 		$produit = $produitManager->getProduitParNum($num);
+		$autreProduits = $produitManager->getProduitParCategorie($produit['id_categorie_produit'], $num);
+		
 	}
 ?>
 
@@ -84,20 +86,25 @@
         <input onclick="window.location.href='choix_tissus.php?num=<?php echo $_GET['num']; ?>'" class="bu-def" type="button" value="Choisissez vos tissus">
 	</div>
 </div>
+	<div id="autre-article">
+		<h4>Article similaire</h4>
+			<?php 
+				foreach ($autreProduits as $autreProduit) {
+					$photo = $photoProduitManager->getPremierePhotoProduit($autreProduit['n_produit']);
 
+					if ($photo && !empty($photo['url'])) {
+						echo '<a href="photo_produit.php?num=' . $autreProduit['n_produit'] . '">';
+						echo '<img src="../public/Image/produit/' . htmlspecialchars($photo['url']) . '" alt="Miniature">';
+						echo '</a>';
+					}
+				}
+			?>
+
+	</div>
 
 </main>
 
-<script>
-	document.querySelectorAll('.fiche-miniature').forEach(miniature => {
-		miniature.addEventListener('click', () => {
-			const mainImage = document.getElementById('mainImage');
-			mainImage.src = miniature.src;
-			mainImage.alt = miniature.alt;
-		});
-	});
-</script>
-
+<script src="../public/script/affichageProduit.js"></script>
 
 <?php
 	require_once 'layouts/footer.php';

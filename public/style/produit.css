@@ -435,6 +435,27 @@ li {
 	font-family: "Pompiere", serif;
 }
 
+#autre-article {
+	margin: auto;
+	max-width: 1000px;
+}
+
+#autre-article h4 {
+	color: #F0DDC9;
+	font-size: 2rem;
+	font-family: "Pompiere", serif;
+}
+
+#autre-article img {
+	width: 200px;
+	margin-right: 40px;
+	transition: transform 0.3s
+}
+
+#autre-article img:hover {
+	transform: scale(1.1)
+}
+
 @media (min-width: 900px) {
 	.fiche-produit {
 		flex-direction: row;

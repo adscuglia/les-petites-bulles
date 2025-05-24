@@ -71,6 +71,15 @@
 			return $req->fetch(PDO::FETCH_ASSOC);
 		}
 
+		public function getProduitParCategorie($id, $num) {
+			$req = $this->bdd->prepare('SELECT * FROM produit WHERE id_categorie_produit = :id AND n_produit <> :num');
+			$req->bindValue(':id', $id);
+			$req->bindValue(':num', $num);
+			$req->execute();
+
+			return $req->fetchAll(PDO::FETCH_ASSOC);
+		}
+
 		public function update(Produit $produit, $id) {
 			$req = $this->bdd->prepare('UPDATE produit SET nom_produit = :nom,descriptif_produit = :descriptif, id_categorie_produit = :id_categorie_produit, prix_TTC = :prix WHERE n_produit = :num_produit');
 

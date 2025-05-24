@@ -62,6 +62,15 @@
 			return $req->fetchAll();
 		}
 
+		public function getPremierePhotoProduit($id) {
+			$req = $this->bdd->prepare('SELECT * FROM photo_produit ph LEFT JOIN produit pr ON ph.n_produit = pr.n_produit WHERE pr.n_produit = :id AND ph.id_photo_produit = ( SELECT MIN(ph2.id_photo_produit) FROM photo_produit ph2 WHERE ph2.n_produit = pr.n_produit )');
+
+			$req->bindValue(':id', $id);
+			$req->execute(); 
+
+			return $req->fetch();
+		}
+
 		public function getAll() {
 			$req = $this->bdd->query('SELECT * FROM photo_produit');
 
